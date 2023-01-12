@@ -1,0 +1,1 @@
+# buf-bug-minimal-example

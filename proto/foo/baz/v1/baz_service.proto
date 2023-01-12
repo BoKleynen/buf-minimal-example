@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package foo.baz.v1;
+
+import "foo/baz/v1/baz_data.proto";
+
+// some comment about this service
+service BazService {
+  // Sends an update to the service.
+  //
+  // Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+  // sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  rpc LogSomething(LogSomethingRequest) returns (LogSomethingResponse);
+}
+
+message LogSomethingRequest {
+  string id = 1;
+  AData a_data = 2;
+  BData b_data = 3;
+}
+
+message LogSomethingResponse {}

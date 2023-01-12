@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package foo.baz.v1;
+
+message AData {
+  message QData {
+    // Name of the something.
+    string name = 1;
+    // count of something
+    uint64 b_count = 2;
+  }
+
+  repeated QData q_data = 1;
+}
+
+message CCount {
+  string name = 1;
+  uint64 count = 2;
+  string id = 3;
+}
+
+message BData {
+  repeated CCount c_counts = 1;
+}
+
+message StabilityData {
+  // Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+  // doloremque laudantium, totam rem aperiam, eaque ipsa :
+  // - quae ab illo inventore veritatis et quasi architecto beatae vitae.
+  // - dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+  //   aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui.
+  repeated string filters = 1;
+}
